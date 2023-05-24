@@ -1,5 +1,10 @@
 function fibonacci(n) {
-  // type your code here
+  if (n < 2) return n;
+  let numberList = [ 0, 1 ]
+  for (let i = 2; i <= n; i++) {
+    numberList[i] = numberList[i -2] + numberList[i - 1]
+  }
+  return parseInt(numberList.slice(-1))
 }
 
 if (require.main === module) {
